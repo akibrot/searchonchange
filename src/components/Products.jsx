@@ -53,7 +53,7 @@ function Products() {
   useEffect(() => {
     if (key === "") {
       setdata(data);
-    } else setdata(data.filter((da) => da.name === key));
+    } else setdata(data.filter((da) => da.name.includes(key)));
   }, [key]);
   return (
     <div className="all" onClick={console.log(key)}>
